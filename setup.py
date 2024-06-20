@@ -17,7 +17,9 @@ with open("requirements.txt") as f:
 
 
 # Read in the version number
-exec(open("ciw/version.py", "r").read())
+__version__ = (
+    open("ciw/version.py", "r").read().strip().split(" = ")[1].replace('"', "")
+)
 
 setup(
     name="Ciw",

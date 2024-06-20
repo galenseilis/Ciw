@@ -1,0 +1,17 @@
+# .ruff.toml
+line-length = 88
+
+select = [
+    "E",
+    "W",
+    "F",
+    "C",
+]
+
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+]
+

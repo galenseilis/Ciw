@@ -4,7 +4,7 @@
 How to Set Arrival & Service Distributions
 ==========================================
 
-Ciw offeres a variety of inter-arrival and service time distributions.
+Ciw offers a variety of inter-arrival and service time distributions.
 A full list can be found :ref:`here <refs-dists>`.
 They are objects, that are defined in the :code:`Network` with the :code:`'arrival_distributions'` and :code:`'service_distributions'` keywords.
 

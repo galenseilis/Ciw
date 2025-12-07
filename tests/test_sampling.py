@@ -264,7 +264,7 @@ class TestSampling(unittest.TestCase):
         )
         Q = ciw.Simulation(N)
         Nd = Q.transitive_nodes[0]
-        for itr in range(10):  # Because repition happens in the simulation
+        for itr in range(10):  # Because repetition happens in the simulation
             self.assertEqual(Nd.simulation.service_times[Nd.id_number]['Customer']._sample(), d)
             self.assertEqual(
                 Nd.simulation.inter_arrival_times[Nd.id_number]['Customer']._sample(), d

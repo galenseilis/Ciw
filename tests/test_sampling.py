@@ -201,7 +201,7 @@ class TestSampling(unittest.TestCase):
         )
         Q = ciw.Simulation(N)
         Nu = Q.transitive_nodes[0]
-        for itr in range(10):  # Because repition happens in the simulation
+        for itr in range(10):  # Because repetition happens in the simulation
             self.assertTrue(
                 ul <= Nu.simulation.service_times[Nu.id_number]['Customer']._sample() <= uh
             )

@@ -24,7 +24,7 @@ from ciw.individual import Individual
 
 class Distribution(object):
     """
-    A general distribution from which all other distirbutions will inherit.
+    A general distribution from which all other distributions will inherit.
     """
     def __repr__(self):
         return "Distribution"
@@ -176,7 +176,7 @@ class Uniform(Distribution):
             raise ValueError("Uniform distribution must sample positive numbers only.")
         if upper < lower:
             raise ValueError(
-                "Uniform distirbution upper bound should be >= lower bound."
+                "Uniform distribution upper bound should be >= lower bound."
             )
         self.lower = lower
         self.upper = upper
@@ -1141,7 +1141,7 @@ class Binomial(Distribution):
             )
         if not isinstance(n, int) or n <= 0:
             raise ValueError(
-                "The number of trials of the Binomial distirbution must be a positive integer."
+                "The number of trials of the Binomial distribution must be a positive integer."
             )
         self.n = n
         self.prob = prob

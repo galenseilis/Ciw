@@ -326,7 +326,7 @@ class TestSampling(unittest.TestCase):
         )
         Q = ciw.Simulation(N)
         Nt = Q.transitive_nodes[0]
-        for itr in range(10):  # Because repition happens in the simulation
+        for itr in range(10):  # Because repetition happens in the simulation
             self.assertTrue(tl <= Nt.simulation.service_times[Nt.id_number]['Customer']._sample() <= th)
             self.assertTrue(tl <= Nt.simulation.inter_arrival_times[Nt.id_number]['Customer']._sample() <= th)
 
@@ -396,7 +396,7 @@ class TestSampling(unittest.TestCase):
         )
         Q = ciw.Simulation(N)
         Ne = Q.transitive_nodes[0]
-        for itr in range(10):  # Because repition happens in the simulation
+        for itr in range(10):  # Because repetition happens in the simulation
             self.assertTrue(
                 Ne.simulation.service_times[Ne.id_number]['Customer']._sample() >= 0.0
             )
@@ -461,7 +461,7 @@ class TestSampling(unittest.TestCase):
         )
         Q = ciw.Simulation(N)
         Ng = Q.transitive_nodes[0]
-        for itr in range(10):  # Because repition happens in the simulation
+        for itr in range(10):  # Because repetition happens in the simulation
             self.assertTrue(
                 Ng.simulation.service_times[Ng.id_number]['Customer']._sample() >= 0.0
             )
@@ -522,7 +522,7 @@ class TestSampling(unittest.TestCase):
         )
         Q = ciw.Simulation(N)
         Nl = Q.transitive_nodes[0]
-        for itr in range(10):  # Because repition happens in the simulation
+        for itr in range(10):  # Because repetition happens in the simulation
             self.assertTrue(Nl.simulation.service_times[Nl.id_number]['Customer']._sample() >= 0.0)
             self.assertTrue(Nl.simulation.inter_arrival_times[Nl.id_number]['Customer']._sample() >= 0.0)
 
@@ -584,7 +584,7 @@ class TestSampling(unittest.TestCase):
         )
         Q = ciw.Simulation(N)
         Nw = Q.transitive_nodes[0]
-        for itr in range(10):  # Because repition happens in the simulation
+        for itr in range(10):  # Because repetition happens in the simulation
             self.assertTrue(
                 Nw.simulation.service_times[Nw.id_number]['Customer']._sample() >= 0.0
             )
@@ -650,7 +650,7 @@ class TestSampling(unittest.TestCase):
         )
         Q = ciw.Simulation(N)
         Nw = Q.transitive_nodes[0]
-        for itr in range(10):  # Because repition happens in the simulation
+        for itr in range(10):  # Because repetition happens in the simulation
             self.assertTrue(Nw.simulation.service_times[Nw.id_number]['Customer']._sample() >= 0.0)
             self.assertTrue(Nw.simulation.inter_arrival_times[Nw.id_number]['Customer']._sample() >= 0.0)
     
@@ -719,7 +719,7 @@ class TestSampling(unittest.TestCase):
         )
         Q = ciw.Simulation(N)
         Nem = Q.transitive_nodes[0]
-        for itr in range(10):  # Because repition happens in the simulation
+        for itr in range(10):  # Because repetition happens in the simulation
             self.assertTrue(
                 Nem.simulation.service_times[Nem.id_number]['Customer']._sample()
                 in set([7.0, 7.1, 7.2, 7.3, 7.7, 7.8])
@@ -806,7 +806,7 @@ class TestSampling(unittest.TestCase):
         )
         Q = ciw.Simulation(N)
         Nc = Q.transitive_nodes[0]
-        for itr in range(10):  # Because repition happens in the simulation
+        for itr in range(10):  # Because repetition happens in the simulation
             self.assertTrue(Nc.simulation.service_times[Nc.id_number]['Customer']._sample() in set(cust_vals))
             self.assertTrue(Nc.simulation.inter_arrival_times[Nc.id_number]['Customer']._sample() in set(cust_vals))
 
@@ -1496,7 +1496,7 @@ class TestSampling(unittest.TestCase):
         )
         Q = ciw.Simulation(N)
         Nw = Q.transitive_nodes[0]
-        for itr in range(10):  # Because repition happens in the simulation
+        for itr in range(10):  # Because repetition happens in the simulation
             self.assertTrue(Nw.simulation.service_times[Nw.id_number]['Customer']._sample() >= 0.0)
             self.assertTrue(Nw.simulation.inter_arrival_times[Nw.id_number]['Customer']._sample() >= 0.0)
 

@@ -42,7 +42,7 @@ class ExactArrivalNode(ArrivalNode):
     """Node with exact numerical time precision.
 
     Inherits from the ArrivalNode class, implements a
-    more precise version of addition to fix discrepencies
+    more precise version of addition to fix discrepancies
     with floating point numbers.
     """
 

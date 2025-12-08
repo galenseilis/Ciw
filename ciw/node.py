@@ -392,7 +392,7 @@ class Node(object):
         """
         Detaches a server from an individual, and vice versa.
         """
-        self.simulation.deadlock_detector.action_at_detatch_server(server)
+        self.simulation.deadlock_detector.action_at_detach_server(server)
         server.cust = False
         server.busy = False
         individual.server = False
@@ -573,7 +573,7 @@ class Node(object):
           - find the individual to release
           - remove from queue
           - record relevant information to data record
-          - detatch individual from server
+          - detach individual from server
           - write record
           - update state tracker
           - begin service of any waiting customers

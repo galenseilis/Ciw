@@ -1271,10 +1271,10 @@ class TestSampling(unittest.TestCase):
         self.assertEqual(str(Mixted_100), 'MixtureDistribution')
         self.assertEqual(m100_samples, m100_expected)
 
-        Mixted_010 = ciw.dists.MixtureDistribution(dists=[D1, D5, D8], probs=[0, 1, 0])
-        m010_samples = [Mixted_010.sample() for _ in range(10)]
+        mixture_distribution_010 = ciw.dists.MixtureDistribution(dists=[D1, D5, D8], probs=[0, 1, 0])
+        m010_samples = [mixture_distribution_010.sample() for _ in range(10)]
         m010_expected = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
-        self.assertEqual(str(Mixted_010), 'MixtureDistribution')
+        self.assertEqual(str(mixture_distribution_010), 'MixtureDistribution')
         self.assertEqual(m010_samples, m010_expected)
 
         mixture_distribution_001 = ciw.dists.MixtureDistribution(dists=[D1, D5, D8], probs=[0, 0, 1])

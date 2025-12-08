@@ -121,11 +121,11 @@ class ArrivalNode:
                 else:
                     self.event_dates_dict[node][clss] = float("inf")
 
-    def inter_arrival(self, nd, clss):
+    def inter_arrival(self, node, customer_class):
         """
         Samples the inter-arrival time for next class and node.
         """
-        return self.simulation.inter_arrival_times[nd][clss]._sample(t=self.simulation.current_time)
+        return self.simulation.inter_arrival_times[node][customer_class]._sample(t=self.simulation.current_time)
 
     def batch_size(self, node, customer_class):
         """

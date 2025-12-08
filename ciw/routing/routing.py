@@ -289,7 +289,7 @@ class JoinShortestQueue(NodeRouting):
         self.tie_break = tie_break
 
     def error_check_at_initialise(self):
-        if not set(self.destinations).issubset(set([nd.id_number for nd in self.simulation.nodes[1:]])):
+        if not set(self.destinations).issubset(set([node.id_number for node in self.simulation.nodes[1:]])):
             raise ValueError("Routing destinations should be a subset of the nodes in the network.")
 
     def get_queue_size(self, node_index):

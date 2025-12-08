@@ -910,7 +910,7 @@ class HyperErlang(PhaseType):
 
 class Coxian(PhaseType):
     """
-    A shortcut for the Coxian distribuion, using the PhaseType distribution
+    A shortcut for the Coxian distribution, using the PhaseType distribution
 
     Takes:
       - `rates` a vector of rates for each phase

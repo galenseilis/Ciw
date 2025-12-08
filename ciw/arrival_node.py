@@ -79,7 +79,7 @@ class ArrivalNode:
     def have_event(self):
         """
         Finds a batch size. Creates that many Individuals and send
-        them to the relevent node. Then updates the event_dates_dict.
+        them to the relevant node. Then updates the event_dates_dict.
         """
         batch = self.batch_size(self.next_node, self.next_class)
         for _ in range(batch):

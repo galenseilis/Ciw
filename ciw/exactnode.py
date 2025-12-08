@@ -11,7 +11,7 @@ class ExactNode(Node):
 
     This class inherits from the Node class, and
     implements a more precise version of addition to
-    fix discrepencies with floating point numbers.
+    fix discrepancies with floating point numbers.
     """
     
     @property

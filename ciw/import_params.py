@@ -254,8 +254,8 @@ def validify_dictionary(params):
         num_nodes = len(params["class_change_matrices"]) == params["number_of_nodes"]
         if not num_nodes:
             raise ValueError("Ensure correct nodes used in class_change_matrices.")
-        for nd in params["class_change_matrices"]:
-            for row in nd.values():
+        for node in params["class_change_matrices"]:
+            for row in node.values():
                 if sum(row.values()) > 1.0 or min(row.values()) < 0.0 or max(row.values()) > 1.0:
                     raise ValueError("Ensure that class change matrix is valid.")
         class_change_names = set([k for matrix in params['class_change_matrices'] for k in matrix.keys()])

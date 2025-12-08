@@ -1033,7 +1033,7 @@ class TestNode(unittest.TestCase):
 
         def custom_server_priority(srv, ind):
             """
-            A custom server priority function that priortises server 1 for
+            A custom server priority function that prioritises server 1 for
             customer class 0 and server 2 for customer class 1.
             """
             if ind.customer_class == 'Class 0':

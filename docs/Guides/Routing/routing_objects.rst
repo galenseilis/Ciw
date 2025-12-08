@@ -30,7 +30,7 @@ Consider a four node system:
   + At node 3 customers can either repeat service there with probability 0.25, or leave the system;
   + At node 4, all customers leave the system.
 
-We can construct a network routing object for this by choosing a set of node routing obejects from the list above. We place them in a list and use the :code:`routers` keyword to create the network object. In this case, the network object would be::
+We can construct a network routing object for this by choosing a set of node routing objects from the list above. We place them in a list and use the :code:`routers` keyword to create the network object. In this case, the network object would be::
 
     >>> import ciw
     >>> R = ciw.routing.NetworkRouting(

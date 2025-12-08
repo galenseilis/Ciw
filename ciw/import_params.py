@@ -95,16 +95,16 @@ def create_network_from_dictionary(params_input):
                         class_change_time_distributions[clss1][clss2] = params['class_change_time_distributions'][clss1][clss2]
 
     nodes, classes = [], {}
-    for nd in range(number_of_nodes):
+    for node_index in range(number_of_nodes):
         nodes.append(
             ServiceCentre(
-                params['number_of_servers'][nd],
-                params["queue_capacities"][nd],
-                class_change_matrices[nd],
-                preempt_priorities[nd],
-                params["ps_thresholds"][nd],
-                params["server_priority_functions"][nd],
-                params["service_disciplines"][nd],
+                params['number_of_servers'][node_index],
+                params["queue_capacities"][node_index],
+                class_change_matrices[node_index],
+                preempt_priorities[node_index],
+                params["ps_thresholds"][node_index],
+                params["server_priority_functions"][node_index],
+                params["service_disciplines"][node_index],
             )
         )
     for clss_name in params['customer_class_names']:

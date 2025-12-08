@@ -114,12 +114,12 @@ class ArrivalNode:
         Initialises the next event dates dictionary
         with random times for each node and class.
         """
-        for nd in self.event_dates_dict:
-            for clss in self.event_dates_dict[nd]:
-                if self.simulation.inter_arrival_times[nd][clss] is not None:
-                    self.event_dates_dict[nd][clss] = self.inter_arrival(nd, clss)
+        for node in self.event_dates_dict:
+            for clss in self.event_dates_dict[node]:
+                if self.simulation.inter_arrival_times[node][clss] is not None:
+                    self.event_dates_dict[node][clss] = self.inter_arrival(node, clss)
                 else:
-                    self.event_dates_dict[nd][clss] = float("inf")
+                    self.event_dates_dict[node][clss] = float("inf")
 
     def inter_arrival(self, nd, clss):
         """

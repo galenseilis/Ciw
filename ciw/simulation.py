@@ -199,7 +199,7 @@ class Simulation(object):
                 self.NodeTypes = [node_class for _ in range(self.network.number_of_nodes)]
             else:
                 if len(node_class) != self.network.number_of_nodes:
-                    raise ValueError("Ensure consistant number of nodes is used throughout.")
+                    raise ValueError("Ensure consistent number of nodes is used throughout.")
                 self.NodeTypes = node_class
         else:
             self.NodeTypes = [Node for _ in range(self.network.number_of_nodes)]

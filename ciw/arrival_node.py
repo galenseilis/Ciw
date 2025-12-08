@@ -66,12 +66,12 @@ class ArrivalNode:
         minnd = None
         minclss = None
         mindate = float("Inf")
-        for nd in self.event_dates_dict:
-            for clss in self.event_dates_dict[nd]:
-                if self.event_dates_dict[nd][clss] < mindate:
-                    minnd = nd
+        for node in self.event_dates_dict:
+            for clss in self.event_dates_dict[node]:
+                if self.event_dates_dict[node][clss] < mindate:
+                    minnd = node
                     minclss = clss
-                    mindate = self.event_dates_dict[nd][clss]
+                    mindate = self.event_dates_dict[node][clss]
         self.next_node = minnd
         self.next_class = minclss
         self.next_event_date = mindate

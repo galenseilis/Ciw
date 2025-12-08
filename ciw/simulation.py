@@ -340,6 +340,6 @@ class Simulation(object):
         the end of the simulation run. Finds the overall
         server utilisation for each node.
         """
-        for nd in self.transitive_nodes:
-            nd.wrap_up_servers(current_time)
-            nd.find_server_utilisation()
+        for transitive_node in self.transitive_nodes:
+            transitive_node.wrap_up_servers(current_time)
+            transitive_node.find_server_utilisation()

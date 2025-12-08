@@ -142,13 +142,13 @@ class FlexibleProcessBased(ProcessBased):
         if self.choice == 'jsq':
             temp_router = JoinShortestQueue(destinations=subset)
             temp_router.initialise(self.simulation, None)
-            nd = temp_router.next_node(ind)
-            return nd.id_number
+            next_node = temp_router.next_node(ind)
+            return next_node.id_number
         if self.choice == 'lb':
             temp_router = LoadBalancing(destinations=subset)
             temp_router.initialise(self.simulation, None)
-            nd = temp_router.next_node(ind)
-            return nd.id_number
+            next_node = temp_router.next_node(ind)
+            return next_node.id_number
 
     def update_individual_route(self, ind, next_node_id):
         """

@@ -515,16 +515,16 @@ class Node(object):
         """
         return original + increment
 
-    def kill_server(self, srvr):
+    def kill_server(self, server):
         """
         Kills a server when they go off duty.
         """
-        srvr.total_time = self.increment_time(self.next_event_date, -srvr.start_date)
-        self.overtime.append(self.increment_time(self.next_event_date, -srvr.shift_end))
-        self.all_servers_busy.append(srvr.busy_time)
-        self.all_servers_total.append(srvr.total_time)
-        indx = self.servers.index(srvr)
-        del self.servers[indx]
+        server.total_time = self.increment_time(self.next_event_date, -server.start_date)
+        self.overtime.append(self.increment_time(self.next_event_date, -server.shift_end))
+        self.all_servers_busy.append(server.busy_time)
+        self.all_servers_total.append(server.total_time)
+        index = self.servers.index(server)
+        del self.servers[index]
 
     def next_node(self, ind):
         """

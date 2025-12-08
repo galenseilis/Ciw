@@ -240,7 +240,7 @@ class TestSimulation(unittest.TestCase):
         Q3 = ciw.Simulation(N)
         Q3.simulate_until_max_customers(10, method="Arrive")
         self.assertEqual(Q3.nodes[0].number_of_individuals, 10)
-        all_inds = sum([len(nd.all_individuals) for nd in Q3.nodes[1:]])
+        all_inds = sum([len(nodes.all_individuals) for nodes in Q3.nodes[1:]])
         rejected_records = Q3.get_all_records(only=["rejection"])
         number_of_losses = len(rejected_records)
         self.assertEqual(all_inds, 10)

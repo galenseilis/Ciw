@@ -139,12 +139,12 @@ class Simulation(object):
         """
         mindate = float("Inf")
         next_active_nodes = []
-        for nd in self.active_nodes:
-            if nd.next_event_date < mindate:
-                mindate = nd.next_event_date
-                next_active_nodes = [nd]
-            elif nd.next_event_date == mindate:
-                next_active_nodes.append(nd)
+        for active_node in self.active_nodes:
+            if active_node.next_event_date < mindate:
+                mindate = active_node.next_event_date
+                next_active_nodes = [active_node]
+            elif active_node.next_event_date == mindate:
+                next_active_nodes.append(active_node)
         if len(next_active_nodes) > 1:
             return random_choice(next_active_nodes)
         return next_active_nodes[0]

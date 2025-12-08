@@ -34,7 +34,7 @@ class Distribution(object):
 
     def _sample(self, t=None, ind=None):
         """
-        Performs vaildity checks before sampling.
+        Performs validity checks before sampling.
         """
         s = self.sample(t=t, ind=ind)
         if (isinstance(s, float) or isinstance(s, int)) and s >= 0:

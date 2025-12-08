@@ -228,10 +228,10 @@ class Probabilistic(NodeRouting):
     def error_check_at_initialise(self):
         if len(self.probs) != len(self.destinations):
             raise ValueError("Routing probabilities should correspond to destinations, and so should be lists of the same length.")
-        if not set(self.destinations).issubset(set([nd.id_number for nd in self.simulation.nodes[1:]])):
+        if not set(self.destinations).issubset(set([node.id_number for node in self.simulation.nodes[1:]])):
             raise ValueError("Routing destinations should be a subset of the nodes in the network.")
 
-    def next_node(self, ind):
+    def next_node(self, individual):
         """
         Probabilistically chooses the next node from the destinations.
         """

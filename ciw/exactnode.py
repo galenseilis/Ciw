@@ -50,7 +50,7 @@ class ExactArrivalNode(ArrivalNode):
         """Increment the original time by the increment."""
         return Decimal(str(original)) + Decimal(str(increment))
 
-    def inter_arrival(self, nd, clss) -> Decimal:
+    def inter_arrival(self, node, clss) -> Decimal:
         """Samples the inter-arrival time for next class and node.
 
         Parameters
@@ -61,7 +61,7 @@ class ExactArrivalNode(ArrivalNode):
         """
         return Decimal(
             str(
-                self.simulation.inter_arrival_times[nd][clss]._sample(
+                self.simulation.inter_arrival_times[node][clss]._sample(
                     self.simulation.current_time
                 )
             )

@@ -127,12 +127,12 @@ class ArrivalNode:
         """
         return self.simulation.inter_arrival_times[nd][clss]._sample(t=self.simulation.current_time)
 
-    def batch_size(self, nd, clss):
+    def batch_size(self, node, customer_class):
         """
         Samples the batch size for next class and node.
         Raises error if a positive integer is not sampled.
         """
-        batch = self.simulation.batch_sizes[nd][clss]._sample(t=self.simulation.current_time)
+        batch = self.simulation.batch_sizes[node][customer_class]._sample(t=self.simulation.current_time)
         if isinstance(batch, int) and batch >= 0:
             return batch
         raise ValueError("Batch sizes must be positive integers.")

@@ -692,9 +692,9 @@ class PhaseType(Distribution):
     A distribution defined by an initial vector and an absorbing Markov chain
 
     Takes:
-      - `initial_state`   the intial probabilities of being in each state
-      - `absorbing_matrix` the martix representation of the absorbing Markov
-        chain, with the final state the absorbing state
+      - `initial_state`   the initial probabilities of being in each state.
+      - `absorbing_matrix` the matrix representation of the absorbing Markov
+        chain, with the final state the absorbing state.
     """
 
     def __init__(self, initial_state, absorbing_matrix): 

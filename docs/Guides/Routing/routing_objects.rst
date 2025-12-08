@@ -55,7 +55,7 @@ This network object can then be used to create a network::
 Notes
 ~~~~~
 
-+ Note that a the :code:`routing` keywork when creating a network object requires a network routing object, *not* a node routing object. This is true even when there is only one node in the network.
++ Note that the :code:`routing` parameter of :code:`ciw.create_network` requires a network routing object, *not* a node routing object. This is true even when there is only one node in the network.
 + Note also that, similar to the use of most other keywords when creating a network object, that routing can be customer class dependent.
 
 For example, a one node network with two customer classes, both classes having different routing::

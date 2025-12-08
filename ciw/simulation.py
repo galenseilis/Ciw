@@ -117,11 +117,11 @@ class Simulation(object):
         Adds the simulation object as an attribute of the distribution objects
         """
         for clss in self.network.customer_class_names:
-            for nd in range(self.network.number_of_nodes):
-                if self.inter_arrival_times[nd + 1][clss] is not None:
-                    self.inter_arrival_times[nd + 1][clss].simulation = self
-                    self.service_times[nd + 1][clss].simulation = self
-                    self.batch_sizes[nd + 1][clss].simulation = self
+            for node_index in range(self.network.number_of_nodes):
+                if self.inter_arrival_times[node_index + 1][clss] is not None:
+                    self.inter_arrival_times[node_index + 1][clss].simulation = self
+                    self.service_times[node_index + 1][clss].simulation = self
+                    self.batch_sizes[node_index + 1][clss].simulation = self
 
     def find_and_initialise_routers(self):
         """

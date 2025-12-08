@@ -55,7 +55,7 @@ class ExactArrivalNode(ArrivalNode):
 
         Parameters
         ----------
-        nd (Node): Next node.
+        node (Node): Next node.
         clss (Individual): Individual class to be selected next.
 
         """

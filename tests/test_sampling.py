@@ -1265,10 +1265,10 @@ class TestSampling(unittest.TestCase):
         D5 = ciw.dists.Deterministic(5.0)
         D8 = ciw.dists.Deterministic(8.0)
 
-        Mixted_100 = ciw.dists.MixtureDistribution(dists=[D1, D5, D8], probs=[1, 0, 0])
-        m100_samples = [Mixted_100.sample() for _ in range(10)]
+        mixture_distribution_100 = ciw.dists.MixtureDistribution(dists=[D1, D5, D8], probs=[1, 0, 0])
+        m100_samples = [mixture_distribution_100.sample() for _ in range(10)]
         m100_expected = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-        self.assertEqual(str(Mixted_100), 'MixtureDistribution')
+        self.assertEqual(str(mixture_distribution_100), 'MixtureDistribution')
         self.assertEqual(m100_samples, m100_expected)
 
         mixture_distribution_010 = ciw.dists.MixtureDistribution(dists=[D1, D5, D8], probs=[0, 1, 0])

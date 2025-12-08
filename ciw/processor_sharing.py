@@ -30,7 +30,7 @@ class PSNode(Node):
 
     def update_all_service_end_dates(self):
         """
-        For each individual reveiving service, calculates the projected end
+        For each individual receiving service, calculates the projected end
         service dates if the system state remains constant.
         """
         next_occupancy = min(self.number_of_individuals, self.ps_capacity)

@@ -195,7 +195,7 @@ def validify_dictionary(params):
     Raises errors if there is something wrong with the
     parameters dictionary.
     """
-    consistant_num_classes = (
+    consistent_num_classes = (
         params["number_of_classes"]
         == len(params["arrival_distributions"])
         == len(params["service_distributions"])
@@ -203,7 +203,7 @@ def validify_dictionary(params):
         == len(params["batching_distributions"])
         == len(params["reneging_time_distributions"])
     )
-    if not consistant_num_classes:
+    if not consistent_num_classes:
         raise ValueError("Ensure consistant number of classes is used throughout.")
     consistant_class_names = (
         set(params["arrival_distributions"])

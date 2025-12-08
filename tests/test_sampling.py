@@ -1277,16 +1277,16 @@ class TestSampling(unittest.TestCase):
         self.assertEqual(str(Mixted_010), 'MixtureDistribution')
         self.assertEqual(m010_samples, m010_expected)
 
-        Mixted_001 = ciw.dists.MixtureDistribution(dists=[D1, D5, D8], probs=[0, 0, 1])
-        m001_samples = [Mixted_001.sample() for _ in range(10)]
+        mixture_distribution_001 = ciw.dists.MixtureDistribution(dists=[D1, D5, D8], probs=[0, 0, 1])
+        m001_samples = [mixture_distribution_001.sample() for _ in range(10)]
         m001_expected = [8, 8, 8, 8, 8, 8, 8, 8, 8, 8]
-        self.assertEqual(str(Mixted_001), 'MixtureDistribution')
+        self.assertEqual(str(mixture_distribution_001), 'MixtureDistribution')
         self.assertEqual(m001_samples, m001_expected)
 
-        Mixted_eq = ciw.dists.MixtureDistribution(dists=[D1, D5, D8], probs=[1/3, 1/3, 1/3])
-        meq_samples = [Mixted_eq.sample() for _ in range(10)]
+        mixture_distribution = ciw.dists.MixtureDistribution(dists=[D1, D5, D8], probs=[1/3, 1/3, 1/3])
+        meq_samples = [mixture_distribution.sample() for _ in range(10)]
         meq_expected = [5, 8, 1, 8, 5, 1, 8, 5, 8, 8]
-        self.assertEqual(str(Mixted_eq), 'MixtureDistribution')
+        self.assertEqual(str(mixture_distribution), 'MixtureDistribution')
         self.assertEqual(meq_samples, meq_expected)
 
     def test_mixture_summary_stats(self):
